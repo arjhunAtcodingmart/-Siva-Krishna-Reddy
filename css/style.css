@@ -1,0 +1,356 @@
+p {
+  display: block;
+}
+
+.container {
+  overflow: hidden;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 980px;
+}
+
+#main .container {
+  padding: 0 10px;
+}
+
+body {
+  box-sizing: border-box;
+  font: 400 20px/1.5 "Source Sans Pro", "Open Sans", "Roboto", "San Francisco",
+    Helvetica, Arial, sans-serif;
+  color: #333;
+  margin: 0;
+  background-color: #fff;
+}
+/* Header */
+a:link {
+  text-decoration: none;
+}
+header {
+  background-color: #333;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+nav {
+  padding: 0;
+}
+#lang-selection {
+  float: right;
+}
+ul.nav-list li {
+  border-right: rgb(150, 150, 150) 2px solid;
+  display: inline;
+  color: white;
+  padding: 0 5px;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+header li {
+  position: relative;
+}
+
+header nav a,
+header nav a:link,
+header nav a:active {
+  padding: 0 8px;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #ccc;
+}
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* .nav-foundation a {
+  padding: 0 16px !important;
+} */
+.nav-foundation {
+  background-color: #026e00;
+}
+#main .container {
+  padding: 0 20px;
+}
+
+.color-lightgray {
+  color: #999;
+}
+
+.download-header h1 {
+  width: 40%;
+  display: block;
+}
+
+footer a,
+footer a:link,
+footer a:active {
+  color: #ccc;
+}
+
+footer {
+  background-color: #333;
+}
+footer.container {
+  float: left;
+}
+
+footer ul li {
+  display: inline;
+}
+
+.openjsfoundation-footer {
+  padding: 1em 20px;
+  font-size: 14px;
+  color: #fff;
+  background: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 400;
+}
+
+a,
+a:link,
+a:active {
+  color: #43853d;
+  text-decoration: none;
+  border-radius: 2px;
+}
+.download-hero a:hover {
+  background: #026e00;
+  color: #fff;
+}
+
+.download-platform a:hover {
+  background: #026e00;
+  color: #fff;
+}
+.download-hero a {
+  display: block;
+  width: 100%;
+  padding-top: 1em;
+  color: #026e00;
+  background: #eaf5e9;
+}
+
+.download-hero .toggle-download .title {
+  font-size: 1.5em;
+  line-height: 1;
+}
+
+.download-hero {
+  margin-bottom: 1em;
+}
+.download-hero ul {
+  display: flex;
+  list-style: none;
+  text-align: center;
+  margin: 0;
+}
+.download-hero li {
+  display: flex;
+  -ms-flex-preferred-size: 200px;
+  flex-basis: 200px;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+/* .download-platform ul {
+  display: inline;
+  -ms-flex-preferred-size: 200px;
+  flex-basis: 200px;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+} */
+.download-platform {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+  background-color: #eaf5e9;
+  align-content: center;
+  text-align: center;
+}
+
+.toggle-download {
+  border-bottom: #026e00 2px solid;
+  padding: 0px;
+}
+.download-hero a {
+  display: block;
+  width: 100%;
+  padding-top: 1em;
+  color: #026e00;
+  background: #eaf5e9;
+}
+.download-hero .download-logo {
+  display: block;
+  margin: 0 auto;
+  fill: #43853d;
+}
+.download-matrix {
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+.download-matrix th {
+  text-align: left;
+  width: 33%;
+}
+/* .download-platform {
+  display: inline;
+  padding: 0px;
+} */
+
+.download-platform a {
+  display: block;
+  width: 100%;
+  color: #026e00;
+  background: #eaf5e9;
+}
+/* .download-platform li {
+  padding: 0;
+  text-decoration: none;
+  display: inline;
+} */
+
+.list-divider-pipe {
+  border-right: rgb(150, 150, 150) 2px solid;
+  display: inline;
+  color: white;
+  padding: 0 8px;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.download-matrix table th {
+  display: table-cell;
+  vertical-align: inherit;
+  font-weight: bold;
+  text-align: -internal-center;
+}
+
+td {
+  border: gray 0.5px solid;
+  text-align: center;
+  display: table-cell;
+  color: green;
+}
+.download-matrix tr td:hover {
+  background-color: #026e00;
+  color: white;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 1px;
+}
+
+/* The Modal (background) */
+#myModalSignup,
+#myModalLogin {
+  align-items: center;
+  float: right;
+  padding: 3%;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 10;
+  width: 100%;
+  height: 100%;
+
+  margin: auto;
+}
+
+.modal-content-signup,
+.modal-content-login {
+  align-self: center;
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  padding: 1%;
+  margin: auto;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.closel {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  padding: 1%;
+  margin: auto;
+}
+
+.closel:hover,
+.closel:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Add Animation */
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+#signupuser,
+#loginuser {
+  border: greenyellow 1px solid;
+  border-radius: 5px;
+  color: white;
+  background-color: #026e00;
+  padding: 1%;
+  margin: 5px;
+  float: inline-end;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 50%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+  margin: auto;
+}
+.form-content {
+  margin: auto;
+  padding-left: 15%;
+  padding-top: 2%;
+}

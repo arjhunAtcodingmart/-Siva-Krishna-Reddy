@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600&display=fallback"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="#" id="logo">
+          <img
+            src="https://nodejs.org/static/images/logo.svg"
+            alt="node.js"
+            width="122"
+            height="75"
+          />
+        </a>
+      </div>
+      <nav>
+        <ul class="nav-list">
+          <li>
+            <a href="">Home</a>
+          </li>
+
+          <li>
+            <a href="">About</a>
+          </li>
+          <li class="active">
+            <a href="">Downloads</a>
+          </li>
+          <li>
+            <a href="">Docs</a>
+          </li>
+          <li>
+            <a href="">Get Involved</a>
+          </li>
+          <li>
+            <a href="">Security</a>
+          </li>
+          <li>
+            <a href="">News</a>
+          </li>
+          <li class="nav-foundation" style="background-color:green">
+            <a href="https://foundation.nodejs.org/">Foundation</a>
+          </li>
+          <li style="float: right;">
+            <a href="" id="mySignUpBtn">SignUp</a>
+          </li>
+          <li style="float: right;">
+            <a href="" id="myLoginBtn">Login</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- The Modal -->
+    <div id="myModalSignup" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content-signup">
+        <span class="close" style="float:right">&times;</span>
+        <div class="form-content">
+          <label for="usr">Username:</label>
+          <br />
+          <input type="text" name="usr" id="username" placeholder="username" />
+          <br />
+          <label for="pas">password:</label>
+          <br />
+          <input
+            type="password"
+            name="pas"
+            id="password"
+            placeholder="password"
+          />
+          <br />
+          <label for="usr">RePassword:</label>
+          <br />
+          <input
+            type="password"
+            name="repas"
+            id="repassword"
+            placeholder="password"
+          />
+          <br />
+          <input
+            id="signupuser"
+            type="submit"
+            value="SignUp"
+            onclick="signup()"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- The Modal -->
+    <div id="myModalLogin" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content-login">
+        <span class="closel" style="float:right">&times;</span>
+        <div class="form-content">
+          <label for="usr">Username:</label>
+          <br />
+          <input
+            type="text"
+            name="usr"
+            id="usernameLogin"
+            placeholder="username"
+          />
+          <br />
+          <label for="pas">password:</label>
+          <br />
+          <input
+            type="password"
+            name="pas"
+            id="passwordlogin"
+            placeholder="password"
+          />
+
+          <br />
+          <input id="loginuser" type="submit" value="Login" onclick="login()" />
+        </div>
+      </div>
+    </div>
+
+    <div id="main">
+      <div class="container">
+        <article>
+          <div class="download-header">
+            <h1>Downloads</h1>
+          </div>
+          <p class="color-lightgray">
+            Latest LTS Version: <strong>12.14.0</strong> (includes npm 6.13.4)
+          </p>
+          <p>
+            Download the Node.js source code or a pre-built installer for your
+            platform, and start developing today.
+          </p>
+
+          <div class="download-hero">
+            <ul class="toggle-download" style="list-style: none" ;>
+              <li>
+                <a class="is-version" title="Display downloads for LTS">
+                  <div class="title">LTS</div>
+                  <div class="tag">Recommended For Most Users</div>
+                </a>
+              </li>
+              <li>
+                <a class="is-version" title="Display downloads for LTS">
+                  <div class="title">Current</div>
+                  <div class="tag">Latest Features</div>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <ul class="download-platform">
+              <li>
+                <!-- https://nodejs.org/dist/v13.5.0/node-v13.5.0-x64.msi -->
+                <a href="#" id="windows-downloadbutton" data-version="v13.5.0">
+                  <i
+                    class="fa fa-windows fa-sm"
+                    style="width: 100; height:100;font-size: 50px;"
+                    aria-hidden="true"
+                  ></i>
+                  <p>Windows Installer</p>
+                  <p class="small color-lightgray" style="font-size: 10px;">
+                    node-v13.5.0-x64.msi
+                  </p>
+                </a>
+              </li>
+              <li>
+                <!-- https://nodejs.org/dist/v13.5.0/node-v13.5.0-x86.msi -->
+                <a href="#" id="apple-downloadbutton" data-version="v13.5.0">
+                  <i
+                    class="fa fa-apple fa-sm "
+                    style="font-size: 50px;"
+                    aria-hidden="true"
+                  ></i>
+                  <p>Mac Installer</p>
+                  <p class="small color-lightgray" style="font-size: 10px;">
+                    node-v13.5.0-x64.msi
+                  </p>
+                </a>
+              </li>
+              <li>
+                <!-- https://nodejs.org/dist/v13.5.0/node-v13.5.0-x86.msi -->
+                <a href="/#" id="linux-downloadbutton" data-version="v13.5.0">
+                  <i
+                    class="fa fa-linux"
+                    style="width: 100; height:100;font-size: 50px;"
+                    aria-hidden="true"
+                  ></i>
+                  <p>Linux Installer</p>
+                  <p class="small color-lightgray" style="font-size: 10px;">
+                    node-v13.5.0-x64.msi
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <table class="download-matrix">
+            <tbody>
+              <tr>
+                <th>Windows Installer (.msi)</th>
+                <a href="https://nodejs.org/dist/v12.14.0/node-v12.14.0-x86.msi"
+                  ><td colspan="3">
+                    32-bit
+                  </td>
+                </a>
+
+                <a
+                  href="https://nodejs.org/dist/v12.14.0/node-v12.14.0-x64.msi"
+                >
+                  <td colspan="3">64-bit</td></a
+                >
+              </tr>
+
+              <tr>
+                <th>Windows Binary (.zip)</th>
+                <a
+                  href="https://nodejs.org/dist/v12.14.0/node-v12.14.0-win-x86.zip"
+                  ><td colspan="3">
+                    32-bit
+                  </td>
+                </a>
+                <a
+                  href="https://nodejs.org/dist/v12.14.0/node-v12.14.0-win-x64.zip"
+                  ><td colspan="3">
+                    64-bit
+                  </td>
+                </a>
+              </tr>
+
+              <tr>
+                <th>macOS Installer (.pkg)</th>
+
+                <a href="https://nodejs.org/dist/v12.14.0/node-v12.14.0.pkg"
+                  ><td colspan="6">64-bit</td></a
+                >
+              </tr>
+
+              <tr>
+                <th>macOS Binary (.tar.gz)</th>
+
+                <a
+                  href="https://nodejs.org/dist/v12.14.0/node-v12.14.0-darwin-x64.tar.gz"
+                  ><td colspan="6">64-bit</td></a
+                >
+              </tr>
+              <tr>
+                <th>Linux Binaries (x64)</th>
+
+                <a
+                  href="https://nodejs.org/dist/v12.14.0/node-v12.14.0-linux-x64.tar.xz"
+                  ><td colspan="6">64-bit</td></a
+                >
+              </tr>
+              <tr>
+                <th>Linux Binaries (ARM)</th>
+                <td colspan="3">
+                  <a
+                    href="https://nodejs.org/dist/v12.14.0/node-v12.14.0-linux-armv7l.tar.xz"
+                    >ARMv7</a
+                  >
+                </td>
+                <td colspan="3">
+                  <a
+                    href="https://nodejs.org/dist/v12.14.0/node-v12.14.0-linux-arm64.tar.xz"
+                    >ARMv8</a
+                  >
+                </td>
+              </tr>
+
+              <tr>
+                <th>Source Code</th>
+                <td colspan="6">
+                  <a
+                    href="https://nodejs.org/dist/v12.14.0/node-v12.14.0.tar.gz"
+                    >node-v12.14.0.tar.gz</a
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <section>
+            <h1 style="font-size: 30px; font-weight: 100;">
+              Additional Downloads
+            </h1>
+            <table class="download-matrix">
+              <tr>
+                <th>
+                  SmartOS Binaries
+                </th>
+                <td colspan="6">
+                  <a href="#">64bit</a>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  Docker Image
+                </th>
+                <td colspan="6">
+                  <a href="#">Official Node.js Docker Image</a>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  Linux on Power Systems
+                </th>
+                <td colspan="6">
+                  <a href="#">64-bit</a>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  Linux on System z
+                </th>
+                <td colspan="6">
+                  <a href="#">64-bit</a>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  AIX on Power Systems
+                </th>
+                <td colspan="6">
+                  <a href="#">64-bit</a>
+                </td>
+              </tr>
+            </table>
+
+            <section>
+              <ul>
+                <li>
+                  <a href="#">Signed SHASUMS for release files</a>
+                </li>
+                <li><a href="#">All download options</a></li>
+                <li><a href="#">Installing Node.js via package manager</a></li>
+                <li><a href="#">Previous Releases</a></li>
+                <li><a href="#">Nightly builds</a></li>
+                <li><a href="#">Node-ChakraCore Nightly builds</a></li>
+                <li><a href="#">Unofficial builds</a></li>
+                <li>
+                  <a href="#"
+                    >Building Node.js from source on supported platforms</a
+                  >
+                </li>
+                <li><a href="#">Installing Node.js via binary archive</a></li>
+              </ul>
+            </section>
+          </section>
+        </article>
+      </div>
+    </div>
+
+    <a href="#" id="scroll-to-top">&uarr; <span>Scroll to top</span></a>
+
+    <footer>
+      <div class="container">
+        <div class="openjsfoundation-footer">
+          <div class="issue-link-container">
+            <a class="openjsfoundation-logo" href="https://openjsf.org/">
+              <img
+                src="https:nodejs.org/static/images/openjs_foundation-logo.svg"
+                alt="OpenJS Foundation"
+                width="120"
+                height="38"
+              />
+            </a>
+            <ul class="list-divider-pipe issue-link">
+              <li>
+                <a href="https://github.com/nodejs/node/issues"
+                  >Report Node.js issue</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/nodejs/nodejs.org/issues"
+                  >Report website issue</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/nodejs/help/issues">Get Help</a>
+              </li>
+            </ul>
+          </div>
+
+          <p>
+            © OpenJS Foundation. All Rights Reserved. Portions of this site
+            originally © Joyent.
+          </p>
+          <p>
+            Node.js is a trademark of Joyent, Inc. and is used with its
+            permission. Please review the
+            <a href="https:nodejs.org/static/documents/trademark-policy.pdf"
+              >Trademark Guidelines of the OpenJS Foundation</a
+            >.
+          </p>
+          <p>
+            <a
+              href="https://raw.githubusercontent.com/nodejs/node/master/LICENSE"
+              >Node.js Project Licensing Information</a
+            >.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
